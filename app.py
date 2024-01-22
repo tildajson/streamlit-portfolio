@@ -225,7 +225,7 @@ with st.container():
     st.header("Send Me a Message!")
 
     contact_form = """
-    <form action="https://formsubmit.co/tildajson00@gmail.com" method="POST">
+    <form action="https://formsubmit.co/41828e942e8e034e46306179ec53c65e" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
