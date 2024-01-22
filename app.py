@@ -14,14 +14,18 @@ profile_pic = current_dir / "assets" / "pfp.png"
 
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Tilda Johansson"
-PAGE_ICON = ":female-office-worker:"
+PAGE_ICON = "👩‍💼"
 NAME = "Tilda Johansson"
 title1 = "Backend Developer"
 title2 = "Machine Learning Enthusiast"
 EMAIL = "tildajson00@gmail.com"
 
 
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+
 # --- LOAD CSS, PDF & ASSETS ---
+
+
 def css_file(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -91,7 +95,7 @@ with col1:
 with col2:
     st.title(f"**{NAME}**")
     st.write(
-        f"**{title1}** and **{title2}**, embracing challenges with a passion for constant growth and success.")
+        f"**{title1}** and **{title2}** from the north of Sweden, embracing challenges with a passion for constant growth and success.")
     st.download_button(
         label=" 📄 Download Resume",
         data=PDFbyte,
