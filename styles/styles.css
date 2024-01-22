@@ -1,0 +1,61 @@
+input[type=message], input[type=email], input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    color: black;
+    background-color: #fff;
+    border: 1px solid #e4bccf;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  button[type=submit] {
+    background-color: #be407d;
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button[type=submit]:hover {
+    background-color: #8d335e;
+  }
+
+
+a {
+  text-decoration: none;
+  color: #e4bccf !important;
+  font-weight: 500;
+}
+
+
+a.nav-link, a.navbar-brand {
+  color: #fff !important;
+}
+
+a.nav-link:hover, a.navbar-brand:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+a:hover {
+    color: #d33682 !important;
+    text-decoration: none;
+}
+
+ul {list-style-type: none;}
+
+#MainMenu {
+  visibility: hidden;
+}
+footer {
+  visibility: hidden;
+}
+header {
+  visibility: hidden;
+}
