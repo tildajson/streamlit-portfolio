@@ -93,7 +93,6 @@ st.write(
 """
 )
 
-st.write("##")
 
 # --- PROJECTS ---
 with st.container():
