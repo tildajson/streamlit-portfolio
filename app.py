@@ -46,9 +46,6 @@ def load_lottieurl(url):
     return r.json()
 
 
-lottie_coding = load_lottieurl(
-    "https://lottie.host/fa10c187-788b-424c-9ce7-7ee64180478b/okgUvSTI7i.json")
-
 lottie_books = load_lottieurl(
     "https://lottie.host/347f3fae-c245-4913-9171-1f447b038fde/7F6iKTArqg.json")
 
@@ -62,31 +59,6 @@ lottie_bot = load_lottieurl(
     "https://lottie.host/f3e1a6c4-3780-4de9-acda-4c28762a9d7a/cREuyfm2bd.json")
 
 
-# --- NAVBAR ---
-st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
-
-st.markdown("""
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #753252;">
-  <a class="navbar-brand" href="#tilda-johansson">Tilda Johansson</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#technical-skills">Skills</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#featured-projects">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#send-me-a-message">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-""", unsafe_allow_html=True)
-
 # --- PROFILE SECTION ---
 col1, col2 = st.columns(2)
 with col1:
@@ -95,7 +67,7 @@ with col1:
 with col2:
     st.title(f"**{NAME}**")
     st.write(
-        f"**{title1}** and **{title2}** from the north of Sweden, embracing challenges with a passion for constant growth and success.")
+        f"**{title1}** and **{title2}** from the north of Sweden, embracing challenges with a passion for constant growth.")
     st.download_button(
         label=" 📄 Download Resume",
         data=PDFbyte,
@@ -217,24 +189,3 @@ with st.container():
         )
         st.markdown(
             "[Source Code](https://github.com/tildajson/recipe-REST-API)")
-
-
-# --- CONTACT FORM ---
-with st.container():
-    st.write("---")
-    st.header("Send Me a Message!")
-
-    contact_form = """
-    <form action="https://formsubmit.co/tildajson00@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message here" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-    """
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.markdown(contact_form, unsafe_allow_html=True)
-    with right_column:
-        st_lottie(lottie_coding, height=300)
